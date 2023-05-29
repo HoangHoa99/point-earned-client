@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+/* RESET CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.break {
+    border-bottom: .5px solid #9d9d9d;
+}
