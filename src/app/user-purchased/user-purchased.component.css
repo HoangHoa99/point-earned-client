@@ -3,7 +3,7 @@
     padding: 35px;
 }
 
-.user-purchased-content h3 {
+h3 {
     text-transform: uppercase;
 }
 
@@ -35,4 +35,39 @@
 .user-purchased img {
     width: 30px;
     height: 30px;
+}
+
+@media screen and (max-width: 420px) {
+
+    .user-purchased-content {
+        height: 40vh;
+        overflow: scroll;
+        margin-top: 10px;
+    }
+
+    .user-purchased-container {
+        padding: 10px;
+    }
+
+    .user-purchased-content .user-purchased {
+        margin: 10px 0;
+    }
+
+    .user-purchased .left {
+        width: 40%;
+    }
+
+    .user-purchased .middle {
+        width: 10%;
+    }
+
+    .user-purchased .right {
+        width: 50%;
+    }
+
+    .user-purchased img {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
 }
