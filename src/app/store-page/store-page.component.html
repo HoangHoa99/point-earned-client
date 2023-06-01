@@ -1,8 +1,11 @@
-<div class="store-page-container">
-    <div class="store-page-content">
-        <div class="store-page-header">
+<div class="store-container">
+    <div class="store-content">
+        <div class="store-header">
             <h1>TEST NAME</h1>
-            <img src="../../assets/images/setting.svg" alt="Store setting">
+            <div class="header-icon">
+                <img class="logout" src="../../assets/images/logout.svg" alt="Logout" (click)="logout()">
+                <img class="setting" src="../../assets/images/setting.svg" alt="Store setting" (click)="openStoreSetting()">
+            </div>
         </div>
         <div class="break"></div>
         <div class="store-page-qr-code">
