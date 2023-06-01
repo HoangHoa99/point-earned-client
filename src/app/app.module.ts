@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { StorePageComponent } from './store-page/store-page.component';
 import { UserPurchasedComponent } from './user-purchased/user-purchased.component';
+import { StoreSettingComponent } from './store-setting/store-setting.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     StorePageComponent,
-    UserPurchasedComponent
+    UserPurchasedComponent,
+    StoreSettingComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,188 @@
+.store-header img:hover {
+  transform: scale(1.1) !important;
+}
+
+.setting-content {
+  margin-top: 40px;
+}
+
+.setting-content p {
+  font-weight: 300;
+  font-size: 25px;
+  text-align: justify;
+}
+
+.setting-content h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+  padding: 35px 15px 0;
+}
+
+.setting-content .rank-setting {
+  margin-top: 20px;
+  padding: 15px;
+  height: 58vh;
+  /* border: 0.1px solid #333; */
+  overflow-y: scroll;
+}
+
+.setting-content button {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #222222;
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+    transform 0.1s;
+  width: auto;
+}
+
+.rank-setting .setting-items {
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.rank-setting h4 {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.rank-setting .setting-items ul {
+  list-style: circle;
+}
+
+.rank-setting .setting-items ul li {
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.rank-setting .setting-items ul li input {
+  width: 60px;
+  margin: 0 5px;
+  padding: 3px;
+}
+
+.setting-content .save {
+  padding: 8px 23px;
+  height: 40px;
+}
+
+.setting-content .save-all {
+  float: right;
+  margin: 20px 0 0;
+  padding: 13px 23px;
+  font-weight: 500;
+  border: 1px solid #e0115f;
+  transition: transform 0.8s ease-in-out;
+}
+
+.setting-content .save-all:hover {
+  transform: scale(1.1);
+}
+
+.bronze-setting button {
+  border: 1px solid #cd7f32;
+  background-color: #cd7f32;
+  transition: 0.8s;
+}
+
+.bronze-setting button:hover {
+  transform: scale(1.1);
+  background-color: #ffffff;
+}
+
+.silver-setting button {
+  border: 1px solid #c0c0c0;
+  background-color: #c0c0c0;
+  transition: 0.8s;
+}
+
+.silver-setting button:hover {
+  transform: scale(1.1);
+  background-color: #ffffff;
+}
+
+.gold-setting button {
+  border: 1px solid #ffd700;
+  background-color: #ffd700;
+  transition: 0.8s;
+}
+
+.gold-setting button:hover {
+  transform: scale(1.1);
+  background-color: #ffffff;
+}
+
+.diamond-setting button {
+  border: 1px solid #cbe3f0;
+  /* background: linear-gradient(to bottom right, #f1f7fb, #cbe3f0, #9ac5db); hover effect not apply */
+  background-color: #cbe3f0;
+  transition: 0.8s;
+}
+
+.diamond-setting button:hover {
+  transform: scale(1.1);
+  background: #ffffff;
+}
+
+@media screen and (max-width: 420px) {
+  .setting-content {
+    margin-top: 20px;
+  }
+
+  .setting-content .rank-setting {
+    padding: 5px;
+    height: calc(100vh - 300px);
+  }
+
+  .setting-content h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 25px 5px 0;
+  }
+
+  .setting-content p {
+    font-size: 18px;
+  }
+
+  .rank-setting h4 {
+    font-size: 19px;
+    margin-top: 20px;
+  }
+
+  .rank-setting .setting-items {
+    flex-direction: column;
+  }
+
+  .rank-setting .setting-items ul li {
+    margin: 10px 0;
+    font-size: 17px;
+  }
+
+  .rank-setting .setting-items ul li input {
+    width: 45px;
+    margin: 0 3px;
+    padding: 1px;
+  }
+
+  .setting-content .save {
+    margin: 5px 0;
+    padding: 5px 20px;
+    height: 35px;
+  }
+
+  .setting-content .save-all {
+    margin: 15px 0 0;
+    padding: 10px 20px;
+  }
+}
