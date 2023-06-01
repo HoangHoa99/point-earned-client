@@ -1,28 +1,61 @@
 <div class="login-page-container">
-    <div class="login-page">
-        <div class="login-form">
-            <form action="#">
-                <h1>Login</h1>
-                <div class="login-content">
-                    <div class="input-field">
-                        <input type="text" placeholder="PHONE" autocomplete="nope">
-                    </div>
-                    <div class="input-field">
-                        <input type="text" placeholder="NAME" autocomplete="nope">
-                    </div>
-                    <div class="input-type">
-                        <span>type: </span>
-                        <input type="radio" id="user" name="user_type" value="USER" checked>
-                        <label for="user">USER</label>
-                        <input type="radio" id="store" name="user_type" value="STORE">
-                        <label for="store">STORE</label>
-                    </div>
-                </div>
-                <div class="login-action">
-                    <button>register</button>
-                    <button (click)="loginAction()">sign in</button>
-                </div>
-            </form>
+  <div class="login-page">
+    <div class="login-form">
+      <form action="#">
+        <h1>{{ "lg_page" | translate }}</h1>
+        <div class="login-content">
+          <div class="input-field">
+            <input
+              (change)="onPhoneChange($event)"
+              type="text"
+              placeholder="{{ 'lg_page_phone' | translate }}"
+              autocomplete="nope"
+            />
+          </div>
+          <div class="input-field">
+            <input
+              (change)="onNameChange($event)"
+              type="text"
+              placeholder="{{ 'lg_page_name' | translate }}"
+              autocomplete="nope"
+            />
+          </div>
+          <div class="input-type">
+            <span>{{ "lg_page_type" | translate }}: </span>
+            <input
+              type="radio"
+              id="user"
+              name="user_type"
+              value="USER"
+              (change)="onTypeChange($event)"
+            />
+            <label for="user">{{ "lg_page_user" | translate }}</label>
+            <input
+              type="radio"
+              id="store"
+              name="user_type"
+              value="STORE"
+              (change)="onTypeChange($event)"
+            />
+            <label for="store">{{ "lg_page_store" | translate }}</label>
+          </div>
+
+          <div class="error-message">
+            <p>{{ errorMessage | translate }}</p>
+          </div>
+          <div class="success-message">
+            <p>{{ successMessage | translate }}</p>
+          </div>
         </div>
+        <div class="login-action">
+          <button (click)="registerAction($event)">
+            {{ "lg_page_register" | translate }}
+          </button>
+          <button (click)="loginAction($event)">
+            {{ "lg_page_signin" | translate }}
+          </button>
+        </div>
+      </form>
     </div>
+  </div>
 </div>
