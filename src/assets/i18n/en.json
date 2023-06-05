@@ -1,0 +1,15 @@
+{
+    "lg_page": "Login",
+    "lg_page_phone": "Phone",
+    "lg_page_name": "Name",
+    "lg_page_type": "type",
+    "lg_page_user": "user",
+    "lg_page_store": "store",
+    "lg_page_register": "register",
+    "lg_page_signin": "sign in",
+    "lg_page_invalid_phone": "Invalid phone number",
+    "lg_page_phone_required": "Phone is required",
+    "lg_page_name_required": "Name is required",
+    "lg_page_type_required": "Type is required",
+    "lg_page_register_success": "Register successful, retype your phone and login"
+}

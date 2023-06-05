@@ -1,11 +1,11 @@
 <div class="user-purchased-container">
   <h3>User purchased</h3>
   <div class="user-purchased-content">
-    <div class="user-purchased">
+    <div class="user-purchased" *ngFor="let item of list; let i = index">
       <div class="left">
-        <img src="../../assets/images/diamond.svg" alt="Diamond rank" />
+        <img src="{{getRankSVG(item)}}" alt="Rank" />
         <div>
-          <p>Name</p>
+          <p>{{getValue(item, 'name')}}</p>
           <p>09876565443</p>
         </div>
       </div>
@@ -13,168 +13,14 @@
       <div class="right">
         <div>
           <p>Purchased number</p>
-          <p>19</p>
+          <p>{{getValue(item, 'purchasedCount')}}</p>
         </div>
         <div>
           <p>Discount remain</p>
-          <p>2</p>
+          <p>{{getValue(item, 'discountRemain')}}</p>
         </div>
       </div>
     </div>
     <div class="break"></div>
-
-    <div class="user-purchased">
-        <div class="left">
-          <img src="../../assets/images/gold.svg" alt="Diamond rank" />
-          <div>
-            <p>Name</p>
-            <p>09876565443</p>
-          </div>
-        </div>
-        <div class="middle"></div>
-        <div class="right">
-          <div>
-            <p>Purchased number</p>
-            <p>19</p>
-          </div>
-          <div>
-            <p>Discount remain</p>
-            <p>2</p>
-          </div>
-        </div>
-      </div>
-      <div class="break"></div>
-
-      <div class="user-purchased">
-        <div class="left">
-          <img src="../../assets/images/silver.svg" alt="Diamond rank" />
-          <div>
-            <p>Name</p>
-            <p>09876565443</p>
-          </div>
-        </div>
-        <div class="middle"></div>
-        <div class="right">
-          <div>
-            <p>Purchased number</p>
-            <p>19</p>
-          </div>
-          <div>
-            <p>Discount remain</p>
-            <p>2</p>
-          </div>
-        </div>
-      </div>
-      <div class="break"></div>
-
-      <div class="user-purchased">
-        <div class="left">
-          <img src="../../assets/images/bronze.svg" alt="Diamond rank" />
-          <div>
-            <p>Name</p>
-            <p>09876565443</p>
-          </div>
-        </div>
-        <div class="middle"></div>
-        <div class="right">
-          <div>
-            <p>Purchased number</p>
-            <p>19</p>
-          </div>
-          <div>
-            <p>Discount remain</p>
-            <p>2</p>
-          </div>
-        </div>
-      </div>
-      <div class="break"></div>
-
-      <div class="user-purchased">
-        <div class="left">
-          <img src="../../assets/images/diamond.svg" alt="Diamond rank" />
-          <div>
-            <p>Name</p>
-            <p>09876565443</p>
-          </div>
-        </div>
-        <div class="middle"></div>
-        <div class="right">
-          <div>
-            <p>Purchased number</p>
-            <p>19</p>
-          </div>
-          <div>
-            <p>Discount remain</p>
-            <p>2</p>
-          </div>
-        </div>
-      </div>
-      <div class="break"></div>
-  
-      <div class="user-purchased">
-          <div class="left">
-            <img src="../../assets/images/iron.svg" alt="Diamond rank" />
-            <div>
-              <p>Name</p>
-              <p>09876565443</p>
-            </div>
-          </div>
-          <div class="middle"></div>
-          <div class="right">
-            <div>
-              <p>Purchased number</p>
-              <p>1</p>
-            </div>
-            <div>
-              <p>Discount remain</p>
-              <p>0</p>
-            </div>
-          </div>
-        </div>
-        <div class="break"></div>
-  
-        <div class="user-purchased">
-          <div class="left">
-            <img src="../../assets/images/silver.svg" alt="Diamond rank" />
-            <div>
-              <p>Name</p>
-              <p>09876565443</p>
-            </div>
-          </div>
-          <div class="middle"></div>
-          <div class="right">
-            <div>
-              <p>Purchased number</p>
-              <p>19</p>
-            </div>
-            <div>
-              <p>Discount remain</p>
-              <p>2</p>
-            </div>
-          </div>
-        </div>
-        <div class="break"></div>
-  
-        <div class="user-purchased">
-          <div class="left">
-            <img src="../../assets/images/bronze.svg" alt="Diamond rank" />
-            <div>
-              <p>Name</p>
-              <p>09876565443</p>
-            </div>
-          </div>
-          <div class="middle"></div>
-          <div class="right">
-            <div>
-              <p>Purchased number</p>
-              <p>19</p>
-            </div>
-            <div>
-              <p>Discount remain</p>
-              <p>2</p>
-            </div>
-          </div>
-        </div>
-        <div class="break"></div>
   </div>
 </div>

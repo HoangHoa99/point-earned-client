@@ -1,7 +1,7 @@
 <div class="store-container">
   <div class="store-content">
     <div class="store-header">
-      <h1>TEST NAME SETTING</h1>
+      <h1>{{ storeName }}</h1>
       <img
         src="../../assets/images/home.svg"
         alt="Store setting"
@@ -10,7 +10,7 @@
     </div>
     <div class="break"></div>
 
-    <div class="setting-content">
+    <div class="setting-content" *ngIf="dataLoaded">
       <p>
         This page is designed for store managers to set their discount settings
         base on user rank
@@ -23,17 +23,35 @@
             <ul>
               <li>
                 User purchased at least
-                <input type="number" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id="LEAST_NUMBER"
+                  value="{{ bronzeSetting.LEAST_NUMBER }}"
+                  (change)="onSettingChange($event, 'BRONZE')"
+                />
                 cup(s)
               </li>
               <li>
                 The discount percentage for the next bill
-                <input type="number" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id="DISCOUNT_VALUE"
+                  value="{{ bronzeSetting.DISCOUNT_VALUE }}"
+                  (change)="onSettingChange($event, 'BRONZE')"
+                />
                 (%)
               </li>
               <li>
                 The number of the discount usage
-                <input type="number" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id="DISCOUNT_LIMIT"
+                  value="{{ bronzeSetting.DISCOUNT_LIMIT }}"
+                  (change)="onSettingChange($event, 'BRONZE')"
+                />
               </li>
             </ul>
             <button class="save" role="button">Save</button>
@@ -47,17 +65,35 @@
             <ul>
               <li>
                 User purchased at least
-                <input type="number" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id="LEAST_NUMBER"
+                  value="{{ silverSetting.LEAST_NUMBER }}"
+                  (change)="onSettingChange($event, 'SILVER')"
+                />
                 cup(s)
               </li>
               <li>
                 The discount percentage for the next bill
-                <input type="number" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id="DISCOUNT_VALUE"
+                  value="{{ silverSetting.DISCOUNT_VALUE }}"
+                  (change)="onSettingChange($event, 'SILVER')"
+                />
                 (%)
               </li>
               <li>
                 The number of the discount usage
-                <input type="number" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id="DISCOUNT_LIMIT"
+                  value="{{ silverSetting.DISCOUNT_LIMIT }}"
+                  (change)="onSettingChange($event, 'SILVER')"
+                />
               </li>
             </ul>
             <button class="save" role="button">Save</button>
@@ -71,17 +107,35 @@
             <ul>
               <li>
                 User purchased at least
-                <input type="number" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id="LEAST_NUMBER"
+                  value="{{ goldSetting.LEAST_NUMBER }}"
+                  (change)="onSettingChange($event, 'GOLD')"
+                />
                 cup(s)
               </li>
               <li>
                 The discount percentage for the next bill
-                <input type="number" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id="DISCOUNT_VALUE"
+                  value="{{ goldSetting.DISCOUNT_VALUE }}"
+                  (change)="onSettingChange($event, 'GOLD')"
+                />
                 (%)
               </li>
               <li>
                 The number of the discount usage
-                <input type="number" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id="DISCOUNT_LIMIT"
+                  value="{{ goldSetting.DISCOUNT_LIMIT }}"
+                  (change)="onSettingChange($event, 'GOLD')"
+                />
               </li>
             </ul>
             <button class="save" role="button">Save</button>
@@ -95,17 +149,35 @@
             <ul>
               <li>
                 User purchased at least
-                <input type="number" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id="LEAST_NUMBER"
+                  value="{{ diamondSetting.LEAST_NUMBER }}"
+                  (change)="onSettingChange($event, 'DIAMOND')"
+                />
                 cup(s)
               </li>
               <li>
                 The discount percentage for the next bill
-                <input type="number" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id="DISCOUNT_VALUE"
+                  value="{{ diamondSetting.DISCOUNT_VALUE }}"
+                  (change)="onSettingChange($event, 'DIAMOND')"
+                />
                 (%)
               </li>
               <li>
                 The number of the discount usage
-                <input type="number" name="" id="" />
+                <input
+                  type="number"
+                  name=""
+                  id="DISCOUNT_LIMIT"
+                  value="{{ diamondSetting.DISCOUNT_LIMIT }}"
+                  (change)="onSettingChange($event, 'DIAMOND')"
+                />
               </li>
             </ul>
             <button class="save" role="button">Save</button>
@@ -114,7 +186,7 @@
         <div class="break"></div>
       </div>
 
-      <button class="save-all" role="button">Save all</button>
+      <button class="save-all" role="button" (click)="saveAllSetting()">Save all</button>
     </div>
   </div>
 </div>

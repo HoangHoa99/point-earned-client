@@ -67,6 +67,7 @@
 
 .login-content .input-type label {
   margin-right: 12px;
+  text-transform: uppercase;
 }
 
 .login-form .login-action {
@@ -101,6 +102,18 @@
 
 .login-action button:nth-child(2):hover {
   background: #3c4d6d;
+}
+
+.error-message p {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  color: red;
+}
+
+.success-message p {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  color: #3aa20c;
 }
 
 @media screen and (max-width: 420px) {
