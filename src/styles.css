@@ -1,3 +1,4 @@
+@import url(../node_modules/angular-notifier/styles.css);
 /* You can add global styles to this file, and also import other style files */
 /* RESET CSS */
 * {
@@ -16,6 +17,7 @@
     height: 100%;
     margin: 0 auto;
     font-family: 'Rubik', sans-serif;
+    position: relative;
 }
 
 .store-content .store-header {

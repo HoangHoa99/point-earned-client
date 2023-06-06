@@ -29,6 +29,28 @@
     font-size: 22px;
 }
 
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+button.qr-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Rubik", sans-serif;
+    margin-top: 10px;
+    background-color: #ffff60;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+}
+
+button.qr-button:hover {
+    transform: scale(1.2);
+}
+
 @media screen and (max-width: 420px) {
     .store-content .store-page-qr-code {
         padding: 35px;

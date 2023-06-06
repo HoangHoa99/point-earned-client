@@ -1,22 +1,49 @@
 <div class="store-container">
-    <div class="store-content">
-        <div class="store-header">
-            <h1>{{getLoginUsername()}}</h1>
-            <div class="header-icon">
-                <img class="logout" src="../../assets/images/logout.svg" alt="Logout" (click)="logout()">
-                <img *ngIf="isStoreLogin" class="setting" src="../../assets/images/setting.svg" alt="Store setting" (click)="openStoreSetting()">
-            </div>
-        </div>
-        <div class="break"></div>
-        <div class="store-page-qr-code">
-            <div class="qr-border">
-                <img src="{{getLoginQRUrl()}}" alt="Store QR code">
-            </div>
-            <p class="qr-code-desc">Scan for point accumulation</p>
-        </div>
-        <div class="break"></div>
-        <div class="store-page-user-rank">
-            <app-user-purchased [list]="userPurchasedList"></app-user-purchased>
-        </div>
+  <div class="store-content">
+    <div class="store-header">
+      <h1>{{ getLoginUsername() }}</h1>
+      <div class="header-icon">
+        <img
+          class="logout"
+          src="../../assets/images/logout.svg"
+          alt="Logout"
+          (click)="logout()"
+        />
+        <img
+          *ngIf="isStoreLogin"
+          class="setting"
+          src="../../assets/images/setting.svg"
+          alt="Store setting"
+          (click)="openStoreSetting()"
+        />
+      </div>
     </div>
+    <div class="break"></div>
+    <div class="store-page-qr-code">
+      <div class="qr-border">
+        <img src="{{ getLoginQRUrl() }}" alt="Store QR code" />
+      </div>
+      <p class="qr-code-desc">Scan for point accumulation</p>
+      <button class="qr-button" (click)="openScanModal()">Scan QR</button>
+    </div>
+    <div class="break"></div>
+    <div class="store-page-user-rank">
+      <app-user-purchased [list]="userPurchasedList"></app-user-purchased>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="openModal" class="modal">
+  <div class="modal-content">
+    <zxing-scanner
+      [torch]="torchEnabled"
+      [(device)]="currentDevice"
+      (scanSuccess)="onCodeResult($event)"
+      [formats]="formatsEnabled"
+      [tryHarder]="tryHarder"
+      (permissionResponse)="onHasPermission($event)"
+      (camerasFound)="onCamerasFound($event)"
+      (torchCompatible)="onTorchCompatible($event)"
+    ></zxing-scanner>
+  </div>
 </div>

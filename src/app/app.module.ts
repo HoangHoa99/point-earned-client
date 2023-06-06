@@ -13,6 +13,9 @@ import { UserPurchasedComponent } from './user-purchased/user-purchased.componen
 import { StoreSettingComponent } from './store-setting/store-setting.component';
 import { LoginService } from './login-page/login-page.service';
 import { SettingService } from './store-setting/store-setting.service';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { StoreService } from './store-page/store-page.service';
+import { NotifierModule } from 'angular-notifier';
 
 @NgModule({
   declarations: [
@@ -32,9 +35,29 @@ import { SettingService } from './store-setting/store-setting.service';
         useFactory: httpTranslateLoader,
         deps: [HttpClient]
       }
+    }),
+    ZXingScannerModule,
+    NotifierModule.withConfig({
+      position: {
+        horizontal: {
+          position: 'right',
+          distance: 12
+        },
+        vertical: {
+          position: 'top',
+          distance: 12,
+          gap: 10
+        }
+      },
+      theme: 'material',
+      behaviour: {
+        autoHide: 5000,
+        onClick: 'hide',
+        onMouseover: 'pauseAutoHide',
+      }
     })
   ],
-  providers: [LoginService, SettingService],
+  providers: [LoginService, SettingService, StoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
