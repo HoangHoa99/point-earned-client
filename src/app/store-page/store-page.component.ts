@@ -59,7 +59,27 @@ export class StorePageComponent {
       this.router.navigate([`login`]);
     }
 
-    this.userPurchasedList = this.loginInfo?.getUserPurchasedList;
+    this.loadUserPurchasedList();
+  }
+
+  loadUserPurchasedList() {
+
+    let body = {
+      "id": this.loginInfo?.getId
+    }
+
+    this.service.userPurchased(body).subscribe(data => {
+      this.handleUserPurchasedResponse(data);
+    });
+  }
+
+  handleUserPurchasedResponse(data: any) {
+    if(data.error) {
+      console.error("Error occur while fetching user purchased ", data.message);
+      return;
+    }
+
+    this.userPurchasedList = data.userPurchasedList;
   }
 
   openStoreSetting() {
@@ -149,6 +169,8 @@ export class StorePageComponent {
     }
 
     this.notifier.notify(notificationType, data.message);
+
+    this.loadUserPurchasedList();
   }
 
   /** !QR scan action */

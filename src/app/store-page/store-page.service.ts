@@ -15,4 +15,9 @@ export class StoreService {
         let accummulateUrl = SERVER_URL_MAP.get(SERVER_URL.POINT_ACCUMMULATE);
         return this.http.post<any>(SERVER_ENDPOINT + accummulateUrl, body);
     }
+
+    userPurchased(body: any) {
+        let userPurchasedUrl = SERVER_URL_MAP.get(SERVER_URL.USER_PURCHASED);
+        return this.http.post<any>(SERVER_ENDPOINT + userPurchasedUrl, body);
+    }
 }

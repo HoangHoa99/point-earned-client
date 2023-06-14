@@ -7,7 +7,6 @@ export class LoginResponse {
     private username: string = '';
     private userType: string = '';
     private qrUrl: string = '';
-    private userPurchasedList: Array<Map<string, string>> = [];
 
     constructor(data: any) {
         this.error = data.error;
@@ -16,7 +15,6 @@ export class LoginResponse {
         this.username = data.username;
         this.userType = data.userType;
         this.qrUrl = data.qrUrl;
-        this.userPurchasedList = data.userPurchasedList;
     }
 
     get getError() {
@@ -43,10 +41,6 @@ export class LoginResponse {
         return this.qrUrl;
     }
 
-    get getUserPurchasedList() {
-        return this.userPurchasedList;
-    }
-
     clear() {
         this.error = false;
         this.message = '';
@@ -54,7 +48,6 @@ export class LoginResponse {
         this.username = '';
         this.userType = '';
         this.qrUrl = '';
-        this.userPurchasedList = [];
     }
 
 }
